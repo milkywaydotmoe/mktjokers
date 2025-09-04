@@ -3,9 +3,10 @@ SMODS.Joker{ --Amitie
     loc_txt = {
         ['name'] = 'Amitie',
         ['text'] = {
-            [1] = 'Creates {C:tarot}The Magician{} if',
-            [2] = 'hand contains a {C:attention}Full House',
-            [3] = '{C:inactive}(Must have room)'
+            [1] = 'Creates {C:tarot}The Magician{}',
+            [2] = 'when played hand contains',
+            [3] = 'a {C:attention}Full House{}',
+            [4] = '{C:inactive}(Must have room){}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -16,20 +17,13 @@ SMODS.Joker{ --Amitie
         y = 3
     },
     cost = 6,
-    rarity = 2,
+    rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     unlocked = true,
     discovered = true,
     atlas = 'jokers',
-
-    loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue + 1] = G.P_CENTERS.c_magician
-        return {
-
-        }
-    end,
 
     calculate = function(self, card, context)
         if context.cardarea == G.jokers and context.joker_main  then

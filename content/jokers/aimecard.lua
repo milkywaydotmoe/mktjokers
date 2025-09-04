@@ -10,8 +10,7 @@ SMODS.Joker{ --Aime Card
         ['name'] = 'Aime Card',
         ['text'] = {
             '{C:green}1 in 2{} chance for',
-            'played cards to',
-            'return to deck'
+            'scoring cards to return to deck.'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

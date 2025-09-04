@@ -19,9 +19,9 @@ SMODS.Joker{ --Mr. Morale and the Big Steppers
     loc_txt = {
         ['name'] = 'Mr. Morale and the Big Steppers',
         ['text'] = {
-            'Gains {C:mult}+#2#{} Mult every',
-            '{C:attention}#3#{} {C:inactive}({C:attention}#1#{C:inactive}){} cards discarded',
-            '{C:inactive}Currently {C:mult}+#4#{}{C:inactive} Mult)'
+            'This Joker gains {C:red}+#2#{} Mult',
+            'every {C:attention}#3#{} cards discarded',
+            '{C:inactive}Currently {C:red}+#4#{C:inactive} Mult (#1# cards discarded){}'
         },
         ['unlock'] = {
             [1] = ''
@@ -32,7 +32,7 @@ SMODS.Joker{ --Mr. Morale and the Big Steppers
         y = 1
     },
     cost = 6,
-    rarity = 2,
+    rarity = 3,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

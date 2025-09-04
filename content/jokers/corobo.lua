@@ -17,8 +17,8 @@ SMODS.Joker{ --Corobo
     loc_txt = {
         ['name'] = "Corobo's Co-primes!",
         ['text'] = {
-            [1] = '{V:1}Balances {C:chips}Chips{} and {C:mult}Mult{} if',
-            [2] = '{C:chips}Chips{} and {C:mult}Mult{} are {C:attention}coprimes{}'
+            [1] = 'Balance {C:blue}Chips{} and {C:red}Mult{} if',
+            [2] = '{C:blue}Chips{} and {C:red}Mult{} are {C:attention}coprime{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

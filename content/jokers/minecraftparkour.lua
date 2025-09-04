@@ -10,7 +10,7 @@ SMODS.Joker{ --Minecraft Parkour
     loc_txt = {
         ['name'] = 'Minecraft Parkour',
         ['text'] = {
-            [1] = '{C:white,X:mult}X[#1#-#2#]{} Mult'
+            [1] = '{X:red,C:white}X1-4{} Mult'
         },
         ['unlock'] = {
             [1] = ''

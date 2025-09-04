@@ -8,8 +8,9 @@ SMODS.Joker{ --Yakuzen Kusuri
     loc_txt = {
         ['name'] = '{f:5}薬膳 楠莉',
         ['text'] = {
-            [1] = '{C:green}1 in 5{} chance to give scored',
-            [2] = 'cards a random {C:enhanced}Enhancement'
+            'Each scored card has',
+            'a {C:green}1 in 5{} chance to',
+            'gain a random {C:attention}Enhancement{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -23,7 +24,7 @@ SMODS.Joker{ --Yakuzen Kusuri
         y = 3
     },
     cost = 8,
-    rarity = 3,
+    rarity = 2,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

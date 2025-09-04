@@ -9,9 +9,12 @@ SMODS.Joker{ --Astro
     loc_txt = {
         ['name'] = 'Astro',
         ['text'] = {
-            [1] = '{C:blue}+#1#{} Chip(s) every time a card is scored',
-            [2] = '{C:attention}Meows{} when triggered',
-            [3] = 'Gains {C:chips}+1{} Chip at end of round',
+            'Played cards give {C:chips}+#1#{}',
+            'Chips when scored,',
+            'increases by {C:attention}1{}',
+            'at end of round',
+            '{C:attention}Meows{} when you do',
+            'almost anything'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -29,10 +32,6 @@ SMODS.Joker{ --Astro
     unlocked = true,
     discovered = true,
     atlas = 'jokers',
-
-    loc_vars = function(self, info_queue, card)
-        return {vars = {card.ability.extra.chipsadd}}
-    end,
 
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
@@ -62,18 +61,17 @@ SMODS.Joker{ --Astro
                     pitch = 1.0,
                 }
         end
-        if context.end_of_round and context.game_over == false and context.main_eval  then
-                return {
-                    message = "mreow!",
-                    sound = play_sound('mktjk_mreow', 1.0, 1.0),
-                    extra = {
-                        func = function()
-                            card.ability.extra.chipsadd = (card.ability.extra.chipsadd) + 1
-                            return true
-                        end,
-                        colour = G.C.GREEN
-                        }
-                }
+        if context.end_of_round and context.game_over == false and context.main_eval then
+            if not context.blueprint then
+                card.ability.extra.chipsadd = (card.ability.extra.chipsadd) + 1
+            end
+            return {
+                message = "mreow!",
+                sound = play_sound('mktjk_mreow', 1.0, 1.0),
+                extra = {
+                    colour = G.C.GREEN
+                    }
+            }
         end
         if context.after and context.cardarea == G.jokers  then
                 return {

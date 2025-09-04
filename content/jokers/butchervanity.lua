@@ -11,12 +11,14 @@ SMODS.Joker{ --Butcher Vanity
     loc_txt = {
         ['name'] = 'Butcher Vanity',
         ['text'] = {
-            [1] = '{C:green}#3# in #4#{} chance for a random',
-            [2] = '{C:attention}consumable{} to be destroyed',
-            [3] = 'when hand played',
-            [4] = '{C:inactive,s:0.8}(Must have at least {C:attention,s:0.8}1 consumable{C:inactive,s:0.8})',
-            [5] = 'Gains {C:white,X:mult}X#2#{} Mult for each card destroyed',
-            [6] = '{C:inactive}(Currently {C:white,X:mult}X#1#{} {C:inactive}Mult)'
+            [1] = '{C:attention}#3#/#4#{} chance to destroy',
+            [2] = 'a random consumable',
+            [3] = 'when hand is played',
+            [4] = 'Gains {X:red,C:white}X#2#{} Mult for',
+            [5] = 'every consumable destroyed',
+            [6] = 'by this Joker',
+            [7] = '{C:inactive,s:0.8}(Must have at least 1 consumeable){}',
+            [8] = '{C:inactive}(Currently #1#X Mult){}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -27,7 +29,7 @@ SMODS.Joker{ --Butcher Vanity
         y = 3
     },
     cost = 4,
-    rarity = 1,
+    rarity = 4,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -52,7 +54,7 @@ SMODS.Joker{ --Butcher Vanity
                 local card_to_destroy = pseudorandom_element(target_cards, pseudoseed('destroy_consumable'))
                 G.E_MANAGER:add_event(Event({
                     func = function()
-                        card_to_destroy:start_dissolve()
+                        SMODS.destroy_cards(card_to_destroy)
                         return true
                     end
                 }))

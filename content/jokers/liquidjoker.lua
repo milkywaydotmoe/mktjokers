@@ -9,7 +9,7 @@ SMODS.Joker{ --MacOS 26 Tahoe Developer Beta 3
         ['text'] = {
             'Played and unscoring cards',
             'in first played hand',
-            'become {C:attention}Glass'
+            'become {C:attention}Glass{} cards'
         }
     },
     pos = {
@@ -17,7 +17,7 @@ SMODS.Joker{ --MacOS 26 Tahoe Developer Beta 3
         y = 0
     },
     cost = 12,
-    rarity = 3,
+    rarity = 2,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -26,17 +26,14 @@ SMODS.Joker{ --MacOS 26 Tahoe Developer Beta 3
     atlas = 'jokers',
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue + 1] = G.P_CENTERS.m_glass
-        return { 
-            
-        }
+        table.insert(info_queue, G.P_CENTERS.m_glass)
     end,
 
     calculate = function(self, card, context) --card is this joker and context holds information about whats going on right now
     if context.before and not context.blueprint and not context.repetition and G.GAME.current_round.hands_played == 1 then --prevent animations from being repeated when it does nothing
+        local unscored = true
+        local converted = false
         for k, v in ipairs(context.full_hand) do
-            local unscored = true
-            local converted = false
             for i, w in ipairs(context.scoring_hand) do
                 if v == w then unscored = false end
             end

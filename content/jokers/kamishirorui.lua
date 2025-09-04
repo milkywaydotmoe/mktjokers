@@ -24,7 +24,7 @@ SMODS.Joker{ --神代 類
         y = 1
     },
     cost = 12,
-    rarity = 3,
+    rarity = 4,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

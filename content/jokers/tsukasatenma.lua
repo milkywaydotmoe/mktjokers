@@ -31,7 +31,7 @@ SMODS.Joker { -- {f:5}天馬 司
         return {vars = {colours = {{0.31, 0.37, 0.63, 1}}}}
     end,
     cost = 12,
-    rarity = 3,
+    rarity = 4,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

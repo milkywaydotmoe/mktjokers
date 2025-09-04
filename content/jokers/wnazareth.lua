@@ -15,7 +15,9 @@ SMODS.Joker{ -- Waters Of Nazareth
         ['name'] = 'Jokers Of Nazareth',
         ['text'] = {
             'Each {C:clubs}Club{} card held in',
-            'hand gives {C:mult}+#1#{} Mult'
+            'hand gives {C:mult}+#1#{} Mult',
+            'per {C:clubs}Club{} card',
+            'in full deck'
         }
     },
     pos = {

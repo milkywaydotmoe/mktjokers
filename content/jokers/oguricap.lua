@@ -16,10 +16,13 @@ SMODS.Joker{ --Oguri Cap
     loc_txt = {
         ['name'] = 'Oguri Cap',
         ['text'] = {
-            'Earn {C:money}$#3#{} at end of round',
-            '{C:green}#1# in #2#{} chance to',
-            'order {C:attention}969 10pc bucket',
-            '{C:attention}meals{} at {C:attention}KFC{}, costing {C:red}$#4#{}',
+            '{C:green}#1# in #2#{} chance to lose',
+            '{C:money}$#4${} at end of round',
+            'due to Oguri Cap',
+            'ordering {C:attention}969{} 10 piece',
+            'bucket meals at KFC',
+            'Otherwise, earn {C:money}#3#${}',
+            'at end of round'
         }
     },
     pos = {
@@ -27,7 +30,7 @@ SMODS.Joker{ --Oguri Cap
         y = 0
     },
     cost = 1,
-    rarity = 1,
+    rarity = 3,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,

@@ -13,8 +13,9 @@ SMODS.Joker{ --Mimukawa Nice Try
     loc_txt = {
         ['name'] = 'Mimukawa Nice Try',
         ['text'] = {
-            '{C:mult}+#1#{} Mult if played hand',
-            'has exactly {C:attention}4{} cards',
+            '{C:mult}+#1#{} Mult if',
+            'scored hand contains',
+            'exactly {C:attention}4{} cards'
         }
     },
     pos = {
@@ -22,7 +23,7 @@ SMODS.Joker{ --Mimukawa Nice Try
         y = 0
     },
     cost = 6,
-    rarity = 2,
+    rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

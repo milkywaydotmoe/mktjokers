@@ -9,7 +9,7 @@ SMODS.Joker { -- TurboChip Card
         ['name'] = 'TurboChip Card',
         ['text'] = {
             [1] = 'Create a random {C:planet}Planet{}',
-            [2] = 'card when hand played',
+            [2] = 'card when hand is played',
             [3] = '{C:inactive}(Must have room)'
         },
         ['unlock'] = {

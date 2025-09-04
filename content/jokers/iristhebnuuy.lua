@@ -8,8 +8,8 @@ SMODS.Joker{ --Iris the Bnuuy!
     loc_txt = {
         ['name'] = 'Iris the Bnuuy!',
         ['text'] = {
-            [1] = 'Create a random {C:spectral}Spectral{} card',
-            [2] = 'when {C:attention}Boss Blind{} defeated'
+            [1] = 'Creates a random {C:spectral}Spectral{} Card',
+            [2] = 'after defeating a {C:attention}Boss Blind{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

@@ -10,11 +10,12 @@ SMODS.Joker{ --ROT FOR CLOUT
     loc_txt = {
         ['name'] = 'ROT FOR CLOUT',
         ['text'] = { -- fixed formatting and colors
-            [1] = '{C:money}-$#2#{} sell value at',
-            [2] = 'end of round',
-            [3] = 'Gains {C:white,X:mult}X#2#{} Mult at',
-            [4] = 'end of round',
-            [5] = '{C:inactive}(Currently {C:white,X:mult}X#1#{C:inactive} Mult)'
+            [1] = 'Sell value decreases by',
+            [2] = '{C:money}$2{} at end of round',
+            [3] = 'Gains {X:mult,C:white}X#2#{} Mult at',
+            [4] = 'end of round if sell',
+            [5] = 'value is more than {C:attention}0{}',
+            [6] = '{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult){}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'
@@ -25,7 +26,7 @@ SMODS.Joker{ --ROT FOR CLOUT
         y = 2
     },
     cost = 12,
-    rarity = 2,
+    rarity = 3,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

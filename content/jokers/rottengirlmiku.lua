@@ -9,8 +9,8 @@ SMODS.Joker { -- Rotten Girl Miku
     loc_txt = {
         ['name'] = 'Rotten Girl Miku',
         ['text'] = {
-            [1] = 'Gains {C:white,X:mult}X#2#{} Mult if hand contains',
-            [2] = 'at least {C:attention}2 Kings{}',
+            [1] = 'Gains {C:white,X:mult}X#2#{} Mult if played hand',
+            [2] = 'contains at least {C:attention}2 Kings{}',
             [3] = '{C:inactive}(Currently {C:white,X:mult}X#1#{C:inactive} Mult)'
         },
         ['unlock'] = {

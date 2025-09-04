@@ -14,7 +14,7 @@ SMODS.Joker{ --ruby
         ['name'] = '{f:5}ｒｕｂｙ',
         ['text'] = {
             'the person who made entropy',
-            '{C:white,X:mult}x#1#{} mult'
+            '{C:white,X:mult}X#1#{} mult'
         }
     },
     pos = {

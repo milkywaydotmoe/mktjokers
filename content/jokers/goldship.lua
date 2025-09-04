@@ -15,8 +15,8 @@ SMODS.Joker{ --Gold Ship
     loc_txt = {
         ['name'] = 'Gold Ship',
         ['text'] = {
-            '{C:green}#1# in #2#{} chance for',
-            '{X:mult,C:white}X#3#{} Mult'
+            '{C:green}#1# in #2#{} chance',
+            'for {X:mult,C:white}X#3#{} Mult'
         }
     },
     pos = {
