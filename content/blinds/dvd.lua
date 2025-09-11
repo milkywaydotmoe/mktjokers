@@ -19,7 +19,6 @@ MKTJK_dvd_stuff.DVD_ICON_SPRITE = assert(love.graphics.newImage(DVD_icon_data))
 
 MKTJK_dvd_stuff.curr_color = {1,1,1,1}
 MKTJK_dvd_stuff.in_dvd = false
-MKTJK_dvd_stuff.hit_corner = false
 MKTJK_dvd_stuff.timer = 0
 MKTJK_dvd_stuff.x_pos = love.graphics.getWidth()/2
 MKTJK_dvd_stuff.y_pos = love.graphics.getHeight()/2
@@ -41,14 +40,13 @@ SMODS.Blind {
                 MKTJK_dvd_stuff.x_pos = love.graphics.getWidth()/2
                 MKTJK_dvd_stuff.y_pos = love.graphics.getHeight()/2
                 MKTJK_dvd_stuff.in_dvd = true
-                MKTJK_dvd_stuff.hit_corner = false
                 MKTJK_dvd_stuff.timer = 0
                 MKTJK_dvd_stuff.angle = (math.random() + 0.5) * math.pi / 4
                 MKTJK_dvd_stuff.velocity_vector = {dx = 130 * math.cos(MKTJK_dvd_stuff.angle), dy = 130 * math.sin(MKTJK_dvd_stuff.angle)}
                 G.E_MANAGER:add_event(Event({
                     trigger = "immediate",
                     func = function()
-                        return MKTJK_dvd_stuff.hit_corner or MKTJK_dvd_stuff.timer > 600
+                        return not MKTJK_dvd_stuff.in_dvd
                     end
                 }))
                 return true
@@ -56,7 +54,6 @@ SMODS.Blind {
         }))
     end,
     disable = function(self)
-        MKTJK_dvd_stuff.hit_corner = true
         MKTJK_dvd_stuff.in_dvd = false
     end
 }
@@ -85,7 +82,6 @@ function love.draw()
             (MKTJK_dvd_stuff.x_pos < 15 and MKTJK_dvd_stuff.y_pos > 775.5) or
             (MKTJK_dvd_stuff.x_pos > 1360 and MKTJK_dvd_stuff.y_pos < 5) or
             (MKTJK_dvd_stuff.x_pos > 1360 and MKTJK_dvd_stuff.y_pos > 775.5) then
-                MKTJK_dvd_stuff.hit_corner = true
                 MKTJK_dvd_stuff.in_dvd = false
                 G.E_MANAGER:add_event(Event({
                     blocking = false,
